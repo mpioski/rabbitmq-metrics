@@ -1,0 +1,12 @@
+rabbit:
+  user: 'guest'
+  password: 'guest'
+  host: 'http://localhost'
+  port: 15672
+
+queue_fields:
+  - name
+  - consumer_utilisation
+  - consumers
+  - messages
+  - rate
