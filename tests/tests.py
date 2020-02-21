@@ -25,6 +25,7 @@ class TestMetrics(unittest.TestCase):
         print(queues)
 
 
-t = TestMetrics()
-t.setUp()
-t.test_queues()
+if __name__ == "__main__":
+    t = TestMetrics()
+    t.setUp()
+    t.test_queues()
