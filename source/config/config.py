@@ -1,17 +1,23 @@
+import os
 import yaml
 
 
 class Config:
+    """
+    This class is responsible to get all configurations from config.yml file
+    """
 
     __monostate = None
+    __path = os.path.dirname(__file__)
+    __file = None
     conf = None
 
     def __init__(self):
         if not Config.__monostate:
             Config.__monostate = self.__dict__
-            self.conf = yaml.load(
-                open("source/config/files/config.yml"), Loader=yaml.BaseLoader
-            )
+            with open(os.path.join(self.__path, "files/config.yml")) as _file:
+                self.__file = _file.read()
+            self.conf = yaml.load(self.__file, Loader=yaml.BaseLoader)
         else:
             self.__dict__ = Config.__monostate
 
