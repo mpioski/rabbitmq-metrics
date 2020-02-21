@@ -34,3 +34,7 @@ class Format:
             queues_info.append(info)
 
         return queues_info
+
+    @staticmethod
+    def join_args(*args):
+        return '/'.join(args)
