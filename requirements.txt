@@ -6,7 +6,7 @@ chardet==3.0.4
 Click==7.0
 idna==2.9
 pathspec==0.7.0
-PyYAML==5.3
+PyYAML==5.4
 regex==2020.2.20
 requests==2.23.0
 toml==0.10.0
